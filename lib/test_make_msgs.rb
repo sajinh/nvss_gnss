@@ -30,7 +30,7 @@ frq = [10.to_i].pack('C*').unpack('H*')[0]
 p frq
 msg = nvs.send_msg("F4",frq)
 p hex_fmt(msg)
-#nvs.mode=:nmea
-##msg = nvs.send_msg("PORZB,RMC,5")
-#p msg
+nvs.mode=:nmea
+msg = nvs.send_msg("PORZB,RMC,5")
+p msg
 
